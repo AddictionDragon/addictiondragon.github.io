@@ -26,6 +26,7 @@
             position: sticky;
             top: 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
         }
 
         nav {
@@ -125,6 +126,13 @@
             padding-bottom: 0.5rem;
         }
 
+        h3 {
+            color: #667eea;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
         /* About Me Section */
         .about-content {
             line-height: 1.8;
@@ -133,6 +141,15 @@
 
         .about-content p {
             margin-bottom: 1rem;
+        }
+
+        .about-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-content li {
+            margin-bottom: 0.5rem;
         }
 
         /* Skills Section */
@@ -157,6 +174,7 @@
         }
 
         .skill-card h3 {
+            color: white;
             font-size: 1.3rem;
             margin-bottom: 1rem;
         }
@@ -200,6 +218,7 @@
         .project-card h3 {
             color: #667eea;
             margin-bottom: 1rem;
+            margin-top: 0;
             font-size: 1.4rem;
         }
 
@@ -338,6 +357,7 @@
             color: #764ba2;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
@@ -351,6 +371,10 @@
             section {
                 padding: 2rem 1rem;
             }
+
+            .logo {
+                font-size: 1.4rem;
+            }
         }
     </style>
 </head>
@@ -362,6 +386,7 @@
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#accomplishments">Accomplishments</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -385,7 +410,142 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <p>Hello! I'm Addiction Dragon, a dedicated data science professional with a passion for uncovering patterns and insights from complex datasets. With expertise in statistical analysis, machine learning, and data visualization, I transform raw data into meaningful business solutions.</p>
+                <p>Beyond data science, I bring a unique background as a former professional ice skater with Disney on Ice and an accomplished endurance athlete. My journey includes multiple Ironman competitions, marathons, and a lifetime of dedication to excellence in both artistic and athletic pursuits.</p>
                 <p>I'm committed to continuous learning and staying at the forefront of data science innovations. My goal is to leverage data-driven decision making to create impactful solutions for real-world problems.</p>
+            </div>
+        </section>
+
+        <!-- Accomplishments Section -->
+        <section id="accomplishments">
+            <h2>Accomplishments</h2>
+            <div class="about-content">
+                <h3>Professional Skating Career</h3>
+                <p><strong>Professional Ice Skater - Disney on Ice, Vienna, VA (August 1994 - May 1996)</strong><br>
+                Performed as understudy (roles of Genie & Jafar) throughout continental US, Japan, Puerto Rico and Canada. Studied script/dialog in several languages. Selected to represent ensemble on numerous television and radio interviews per week, as well as public relations appearances and community work. Performed at Radio City Music Hall (New York), Budekon (Tokyo), and Palacio de los Deportes (Mexico City). Received extensive public-relations training.</p>
+
+                <h3>Skating Instructor Experience</h3>
+                <p><strong>The Alpharetta Family Skating Center</strong><br>
+                USFSA Learn to Skate Program - Private Lessons and Group Classes</p>
+                
+                <p><strong>The Ice Forum (1998-2001)</strong><br>
+                Locations: Stockbridge (closed), Duluth, Town Center<br>
+                USFSA Learn to Skate Program</p>
+
+                <h3>Certifications & Memberships</h3>
+                <ul>
+                    <li>Professional Skating Association (PSA) Member</li>
+                    <li>USFSA Member 639033</li>
+                    <li>CPR Certified for Adults and Pediatric</li>
+                </ul>
+
+                <h3>Ice Skating Achievements</h3>
+                <ul>
+                    <li>USFSA South Atlantic Regional Pre-Intermediate Gold Medalist, Freestyle</li>
+                    <li>USFSA South Atlantic Regional Pre-Intermediate Gold Medalist, Figures</li>
+                    <li>Novice Freestyle</li>
+                    <li>1992 Skate America Host Rink Participant, Atlanta GA</li>
+                </ul>
+
+                <h3>Roller Skating Achievements</h3>
+                <ul>
+                    <li>1991 Regional Freshman Men 3rd Place USAC/RS</li>
+                    <li>1990 USAC/RS Junior Olympic National Championships, 1st place Figures</li>
+                    <li>1990 USAC/RS Junior Olympic National Championships, 3rd place Freestyle</li>
+                    <li>1990 USAC/RS Junior Olympic Regional Championships, 1st place Figures</li>
+                    <li>1990 USAC/RS Junior Olympic Regional Championships, 1st Place Freestyle</li>
+                    <li>4 Time Gold Medalist Georgia State Games (Freestyle, Figures, Dance, Pairs)</li>
+                </ul>
+
+                <p><strong>Invited Attendee</strong><br>
+                International Artistic Roller Skating Academy<br>
+                United States Olympic Training Center, Colorado Springs, Colorado (1990)</p>
+
+                <h3>Triathlon Achievements</h3>
+                
+                <p><strong>Full Ironman Distance (140.6 Miles)</strong></p>
+                <ul>
+                    <li>Ironman Florida Finisher Nov 7, 2009 - 13:52:54</li>
+                    <li>Ironman Florida Finisher Nov 1, 2008 - 12:49:50</li>
+                </ul>
+
+                <p><strong>Half Ironman Distance (70.3 Miles)</strong></p>
+                <ul>
+                    <li>Augusta Half Ironman 2019</li>
+                    <li>Florida Half Iron Man 2019</li>
+                    <li>Augusta Half Ironman Sept 27, 2009 - 6:41:24</li>
+                    <li>Gulf Coast Triathlon May 9, 2009 - 6:23:57</li>
+                    <li>Florida Half Ironman May 26, 2006 - 6:05:21</li>
+                    <li>Kentucky Half-Iron Distance (Iron distance) 70.3</li>
+                    <li>Miamman Triathlon Nov 12, 2006 - 7:09:07</li>
+                </ul>
+
+                <p><strong>International Distance</strong></p>
+                <ul>
+                    <li>Walt Disney World Triathlon 2005 - 2:58:49</li>
+                    <li>Walt Disney World Triathlon 2004</li>
+                    <li>Tri-ing for a Cure Epilepsy Research Foundation - 3rd place Men</li>
+                    <li>St. Anthony's Triathlon 2008 - 2:51:27</li>
+                    <li>St. Anthony's Triathlon 2007 - 2:44:28</li>
+                    <li>St. Anthony's Triathlon 2006 - 2:48:20</li>
+                    <li>St. Anthony's Triathlon 2005 - 2:48:20</li>
+                </ul>
+
+                <h3>Marathon Achievements (PR: 4:46:16)</h3>
+                
+                <p><strong>Marathon and Half (39.3 Miles)</strong></p>
+                <ul>
+                    <li>Goofy Challenge 2010</li>
+                </ul>
+
+                <p><strong>Full Marathons (26.2 Miles)</strong></p>
+                <ul>
+                    <li>Publix Full Marathon 2018</li>
+                    <li>Publix Georgia Full Marathon 2017</li>
+                    <li>A1A Marathon Feb 20, 2011</li>
+                    <li>Disney Marathon Jan 10, 2010</li>
+                    <li>ING Miami Marathon Jan 25, 2009 - 4:46:16</li>
+                    <li>ING Atlanta Marathon March 29, 2009</li>
+                    <li>A1A Marathon Feb 22, 2009</li>
+                    <li>Walt Disney World Marathon Jan 13, 2008</li>
+                    <li>ING Miami Marathon Jan 27, 2008 - 4:58:17</li>
+                    <li>San Francisco Marathon Aug 3, 2008</li>
+                    <li>ING Miami Marathon Jan 29, 2006</li>
+                </ul>
+
+                <p><strong>Half Marathon (13.1 Miles)</strong></p>
+                <ul>
+                    <li>Atlanta Half Marathon 2024</li>
+                    <li>Atlanta Thanksgiving Day Half Marathon 2023</li>
+                    <li>Investco QQQ Thanksgiving Day Half Marathon 2019</li>
+                    <li>Publix Georgia Half Marathon 2019</li>
+                    <li>Investco Thanksgiving Day Half 2018 - 2:37:48</li>
+                    <li>Publix Georgia Half Marathon 2017</li>
+                    <li>Atlanta Thanksgiving Day Half 2017 - 2:42:35</li>
+                    <li>Atlanta Thanksgiving Day Half Marathon 2016</li>
+                    <li>Atlanta Thanksgiving Day Half Marathon 2013</li>
+                    <li>Walt Disney World Half Marathon 2011</li>
+                    <li>Bicoastal Disney Challenge 2010</li>
+                    <li>Disneyland Half Marathon 2010</li>
+                    <li>Disney Half Marathon 2010</li>
+                    <li>Atlanta Half Marathon 2005</li>
+                </ul>
+
+                <p><strong>10 Miler</strong></p>
+                <ul>
+                    <li>PNC 10 2017 10 Miler - 2:06:22</li>
+                </ul>
+
+                <p><strong>10K (6.1 Miles)</strong></p>
+                <ul>
+                    <li>Peachtree 2019 - 1:18:00</li>
+                    <li>Peachtree 2018 - 1:14:00</li>
+                </ul>
+
+                <h3>Notable Other Accomplishments</h3>
+                <ul>
+                    <li>Climbed Mt. Fuji, Japan (1995)</li>
+                    <li>Published Artwork - 87,000 prints, National Art on presidential Tour (Between 5th and 6th grade)</li>
+                </ul>
             </div>
         </section>
 
