@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addiction Dragon - Data Science Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.7;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #667eea;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        /* About Me Section */
+        .about-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1rem;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .skill-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-card ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .skill-card li {
+            padding: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .skill-card li:before {
+            content: "✓ ";
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .project-card p {
+            color: #555;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .project-tag {
+            background: #f0f0f0;
+            color: #667eea;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #764ba2;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #667eea;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #764ba2;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-menu {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">🐉 Addiction Dragon</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Data Science enthusiast passionate about transforming data into actionable insights</p>
+            <a href="#about" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>Hello! I'm Addiction Dragon, a dedicated data science professional with a passion for uncovering patterns and insights from complex datasets. With expertise in statistical analysis, machine learning, and data visualization, I transform raw data into meaningful business solutions.</p>
+                <p>I'm committed to continuous learning and staying at the forefront of data science innovations. My goal is to leverage data-driven decision making to create impactful solutions for real-world problems.</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>My Data Science Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>R</li>
+                        <li>SQL</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Machine Learning</h3>
+                    <ul>
+                        <li>Supervised Learning</li>
+                        <li>Unsupervised Learning</li>
+                        <li>Deep Learning</li>
+                        <li>NLP</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Data Analysis & Visualization</h3>
+                    <ul>
+                        <li>Pandas & NumPy</li>
+                        <li>Matplotlib & Seaborn</li>
+                        <li>Tableau</li>
+                        <li>Power BI</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Big Data & Tools</h3>
+                    <ul>
+                        <li>Apache Spark</li>
+                        <li>Hadoop</li>
+                        <li>TensorFlow</li>
+                        <li>Scikit-learn</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                        <li>Redis</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Cloud Platforms</h3>
+                    <ul>
+                        <li>AWS</li>
+                        <li>Google Cloud</li>
+                        <li>Azure</li>
+                        <li>Docker & Kubernetes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3>Customer Churn Prediction</h3>
+                    <p>Developed a machine learning model to predict customer churn with 85% accuracy using logistic regression and ensemble methods. This project helped reduce customer attrition by identifying at-risk customers.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Scikit-learn</span>
+                        <span class="project-tag">Pandas</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Sales Analytics Dashboard</h3>
+                    <p>Created an interactive Tableau dashboard analyzing 5 years of sales data. Provided real-time insights into regional performance, product trends, and revenue forecasts for executive decision-making.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Tableau</span>
+                        <span class="project-tag">SQL</span>
+                        <span class="project-tag">Business Intelligence</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>NLP Sentiment Analysis</h3>
+                    <p>Built a deep learning model using LSTM networks to analyze customer sentiment from social media. Achieved 92% accuracy in classifying positive, neutral, and negative sentiments from text data.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">TensorFlow</span>
+                        <span class="project-tag">NLP</span>
+                        <span class="project-tag">Deep Learning</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+
+                <div class="social-links">
+                    <a href="https://github.com" class="social-link" title="GitHub">
+                        <span>🔗</span>
+                    </a>
+                    <a href="https://linkedin.com" class="social-link" title="LinkedIn">
+                        <span>💼</span>
+                    </a>
+                    <a href="https://twitter.com" class="social-link" title="Twitter">
+                        <span>𝕏</span>
+                    </a>
+                    <a href="mailto:your-email@example.com" class="social-link" title="Email">
+                        <span>✉️</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Addiction Dragon. All rights reserved.</p>
+        <p>Designed with passion | <a href="#home">Back to Top</a></p>
+    </footer>
+</body>
+</html>
