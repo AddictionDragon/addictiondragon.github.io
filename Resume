@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.D. Weidner, Ph.D. - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
+        
+        section:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #667eea;
+            text-align: center;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        .about-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .credentials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .credential-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .credential-item h3 {
+            color: #764ba2;
+            margin-bottom: 0.5rem;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .skill-category h3 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .skill-category li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .accomplishments {
+            background: white;
+        }
+        
+        .accomplishment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .accomplishment-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .accomplishment-card h3 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+        }
+        
+        .accomplishment-card ul {
+            list-style: none;
+        }
+        
+        .accomplishment-card li {
+            padding: 0.3rem 0;
+            font-size: 0.95rem;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>J.D. Weidner, Ph.D., CPsychol</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#accomplishments">Accomplishments</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Welcome</h2>
+            <p>Licensed Professional Counselor | Addiction Psychology Specialist | Research & Analytics Professional</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I am a licensed mental health professional with a Ph.D. in Addiction Psychology and over 15 years of experience in clinical assessment, psychotherapy, and behavioral health. With over 10 years of direct clinical experience providing mental health and substance use disorder treatment across diverse settings, I bring a comprehensive understanding of treatment delivery from both clinical and operational perspectives.</p>
+                
+                <p>As a former CEO and Founder of a behavioral health organization, I have deep operational expertise in connecting clinical services to sustainable reimbursement models. My experience includes administration of state health plans for Blue Cross Blue Shield (BCBS), where I developed expertise in connecting clinical standards with utilization review processes to optimize third-party payer reviews, improve revenue cycle management, and ensure client-driven outcomes. My approach bridges clinical excellence with financial sustainability by developing policies aligned with CARF, Joint Commission standards, MCG guidelines, and URAC requirements.</p>
+                
+                <p>Beyond clinical work, I bring doctoral-level expertise in quantitative research and data analysis, with published research in addiction psychology. I have served as an invited reviewer for APA journals, providing expert review in client-centered therapy, evidence-based treatment, and survivor guilt. I combine advanced statistical analysis skills with programming proficiency in Python, R, SQL, and HTML. Currently expanding my expertise through TripleTen's AI/ML bootcamp to integrate machine learning approaches into behavioral health research and practice.</p>
+                
+                <div class="credentials">
+                    <div class="credential-item">
+                        <h3>Education</h3>
+                        <p><strong>Ph.D.</strong> Addiction Psychology<br>Capella University (2023)</p>
+                        <p><strong>Doctoral Coursework</strong> Conflict Analysis & Resolution<br>Nova Southeastern University (2008–2011)</p>
+                        <p><strong>M.S.</strong> Psychology<br>Nova Southeastern University (2008)</p>
+                        <p><strong>B.S.</strong> Psychology<br>Valdosta State University (2005)</p>
+                        <p><strong>AI/ML Bootcamp</strong><br>TripleTen (In Progress)</p>
+                    </div>
+                    <div class="credential-item">
+                        <h3>Licenses</h3>
+                        <p>Licensed Professional Counselor (GA)</p>
+                        <p>Licensed Mental Health Counselor (FL)</p>
+                        <p>Florida Qualified Supervisor (MHC/MFT)</p>
+                        <p>BPS Chartered Psychologist (UK)</p>
+                        <p>National Certified Counselor</p>
+                    </div>
+                    <div class="credential-item">
+                        <h3>Certifications</h3>
+                        <p>NASM Certified Personal Trainer</p>
+                        <p>Human Subject Research (CITI)</p>
+                        <p>CPR/BLS American Heart Association</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Professional Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Data Science & Programming</h3>
+                    <ul>
+                        <li>Python Programming (Data Analysis & ML)</li>
+                        <li>R Statistical Computing</li>
+                        <li>SQL Database Queries & Management</li>
+                        <li>HTML/CSS Web Development</li>
+                        <li>Machine Learning & AI (TripleTen Bootcamp)</li>
+                        <li>Data Visualization</li>
+                        <li>Statistical Modeling</li>
+                        <li>Predictive Analytics</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Research & Data Analysis</h3>
+                    <ul>
+                        <li>Doctoral-level quantitative research design</li>
+                        <li>Doctoral-level qualitative research training</li>
+                        <li>Advanced statistical analysis & SPSS</li>
+                        <li>Python statistical analysis</li>
+                        <li>Published research in peer-reviewed journals</li>
+                        <li>Qualitative methods (ethnography, grounded theory, thematic analysis)</li>
+                        <li>Mixed methods research</li>
+                        <li>Experimental design & hypothesis testing</li>
+                        <li>Regression analysis & correlation studies</li>
+                        <li>Research ethics & IRB compliance</li>
+                        <li>Academic writing & manuscript preparation</li>
+                        <li>Program evaluation & outcome metrics</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Clinical & Assessment</h3>
+                    <ul>
+                        <li>Biopsychosocial Assessment</li>
+                        <li>DSM-5 Diagnostic Classification</li>
+                        <li>ASAM Criteria Application</li>
+                        <li>Crisis Intervention & Stabilization</li>
+                        <li>Risk Assessment & Management</li>
+                        <li>Level of Care Determination</li>
+                        <li>Treatment Planning & Coordination</li>
+                        <li>Evidence-Based Screening Tools</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Therapeutic Modalities</h3>
+                    <ul>
+                        <li>Cognitive Behavioral Therapy (CBT)</li>
+                        <li>Dialectical Behavior Therapy (DBT)</li>
+                        <li>Motivational Interviewing</li>
+                        <li>Solution-Focused Brief Therapy</li>
+                        <li>Trauma-Focused CBT</li>
+                        <li>12-Step Facilitation</li>
+                        <li>Exposure Therapy</li>
+                        <li>Client-Centered Therapy</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Program Development & Administration</h3>
+                    <ul>
+                        <li>Nonprofit Organization Management & Leadership</li>
+                        <li>Grant Writing & Funding Applications</li>
+                        <li>Ryan White Title I/II Grant Writing</li>
+                        <li>Program Design & Implementation</li>
+                        <li>Documentation Standards & Compliance</li>
+                        <li>URAC & MCG Guidelines Implementation</li>
+                        <li>Clinical Utilization Review & Management</li>
+                        <li>Quality Assurance & Improvement Programs</li>
+                        <li>Care Coordination & Case Management</li>
+                        <li>Insurance Certification & Authorization</li>
+                        <li>Accreditation Readiness & Maintenance</li>
+                    </ul>
+                </div>                
+                <div class="skill-category">
+                    <h3>Healthcare Leadership & Policy</h3>
+                    <ul>
+                        <li>CEO & Healthcare Operations Management</li>
+                        <li>Revenue Cycle Optimization</li>
+                        <li>Clinical-to-Reimbursement Integration</li>
+                        <li>Third-Party Payer Relations & Negotiations</li>
+                        <li>Utilization Review & Management</li>
+                        <li>CARF Standards Development & Implementation</li>
+                        <li>Joint Commission (JC) Accreditation Compliance</li>
+                        <li>MCG (Milliman Care Guidelines) Application</li>
+                        <li>URAC Standards & Clinical Review</li>
+                        <li>Clinical Policy Development</li>
+                        <li>Treatment Authorization Optimization</li>
+                        <li>Client-Driven Outcome Measurement</li>
+                        <li>Strategic Financial Planning</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Specialized Clinical Populations</h3>
+                    <ul>
+                        <li>Co-Occurring Disorders Treatment</li>
+                        <li>Substance Use Disorders</li>
+                        <li>Child & Adolescent Psychology</li>
+                        <li>Severe Persistent Mental Illness (SPMI)</li>
+                        <li>Forensic Populations</li>
+                        <li>Crisis & Emergency Services</li>
+                        <li>Family Systems Therapy</li>
+                        <li>Diverse Community Populations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="accomplishments" class="accomplishments">
+        <div class="container">
+            <h2>Notable Accomplishments</h2>
+            <div class="accomplishment-grid">
+                <div class="accomplishment-card">
+                    <h3>Academic & Research</h3>
+                    <ul>
+                        <li><strong>Doctoral-level published research:</strong> Weidner, J. D. (2022). <em>Sex assigned at birth and prevention messages for cannabis</em> (Publication No. 30241784) [Doctoral dissertation, Capella University]. ProQuest Dissertations & Theses Global.</li>
+                        <li><strong>APA journal reviewer:</strong> Invited expert reviewer for American Psychological Association journals in client-centered therapy, evidence-based treatment, and survivor guilt</li>
+                        <li><strong>Quantitative research expertise:</strong> Advanced statistical analysis, experimental design, and data interpretation</li>
+                        <li>Published three articles in <em>PsycCRITIQUES</em></li>
+                        <li>Presented at Southeastern Teaching of Psychology Conference (2012): Correlation analysis research</li>
+                        <li>Presented at Southeastern Psychological Association Conference (2008)</li>
+                        <li>Guest lecturer at Georgia State University (multiple courses, 2011–2018)</li>
+                        <li>Adjunct psychology lecturer at Gwinnett Technical College (2021–2022)</li>
+                        <li><strong>Current training:</strong> AI/ML bootcamp at TripleTen</li>
+                    </ul>
+                </div>
+                
+                <div class="accomplishment-card">
+                    <h3>Leadership & Organizational Development</h3>
+                    <ul>
+                        <li><strong>CEO leadership:</strong> Deep operational expertise in behavioral health service delivery and financial sustainability</li>
+                        <li><strong>10+ years clinical experience:</strong> Direct provision of mental health and substance use disorder treatment across inpatient, outpatient, and community settings</li>
+                        <li><strong>BCBS state health plans:</strong> Administered state health plan operations for Blue Cross Blue Shield, managing utilization review and clinical authorization processes</li>
+                        <li><strong>Grant writing expertise:</strong> Doctoral-level training in NIMH/NIH grant submissions; Ryan White Title I/II grant writing and funding applications for HIV/AIDS services</li>
+                        <li><strong>Revenue optimization:</strong> Connected clinical services to reimbursement by aligning treatment standards with utilization review protocols</li>
+                        <li><strong>Third-party payer relations:</strong> Improved revenue through strategic optimization of insurance reviews and authorization processes</li>
+                        <li><strong>Client-driven outcomes:</strong> Developed outcome measurement systems that balance clinical excellence with financial viability</li>
+                        <li>Implemented CARF-aligned policies and Joint Commission compliance frameworks</li>
+                        <li>Created clinical review processes using MCG guidelines to streamline authorizations</li>
+                        <li>Established URAC-compliant utilization review systems</li>
+                    </ul>
+                </div>
+                
+                <div class="accomplishment-card">
+                    <h3>Athletic Achievements</h3>
+                    <ul>
+                        <li><strong>Ice Skating:</strong> 2x USFSA South Atlantic Regional Gold Medalist (Pre-Intermediate Freestyle & Figures)</li>
+                        <li><strong>Roller Skating:</strong> 1990 USAC/RS Junior Olympic National Champion (1st Figures, 3rd Freestyle)</li>
+                        <li><strong>Professional Skating:</strong> Disney on Ice performer (1994-1996)</li>
+                        <li><strong>Ironman:</strong> 2x Ironman Florida Finisher (2008, 2009)</li>
+                        <li><strong>Half Ironman:</strong> 6x 70.3 Distance Finisher</li>
+                        <li><strong>Marathon:</strong> 12+ Full Marathon Finisher (PR: 4:46:16)</li>
+                        <li><strong>Other:</strong> 20+ Half Marathon Finisher, Multiple Peachtree 10K Finisher</li>
+                        <li>Performed at Radio City Music Hall, Budokan (Tokyo), and Palacio de los Deportes (Mexico City)</li>
+                        <li>Invited Attendee: International Artistic Roller-Skating Academy, US Olympic Training Center (1990)</li>
+                        <li>4-Time Gold Medalist, Georgia State Games (Roller Skating)</li>
+                        <li>Published Artwork: 87,000 prints on National Art Presidential Tour</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 J.D. Weidner, Ph.D. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
