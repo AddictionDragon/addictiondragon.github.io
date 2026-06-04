@@ -195,6 +195,71 @@
             font-size: 0.95rem;
         }
         
+        .projects {
+            background: #111111;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #2a2a2a;
+            border-top: 4px solid #4a9eff;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .project-card h3 {
+            color: #4a9eff;
+            font-size: 1.15rem;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            color: #b0b0b0;
+            flex: 1;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .project-tag {
+            background: #0d2137;
+            color: #4a9eff;
+            padding: 0.25rem 0.65rem;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            border: 1px solid #1e4976;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: #4a9eff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border: 1px solid #4a9eff;
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            align-self: flex-start;
+            transition: background 0.2s;
+        }
+
+        .project-link:hover {
+            background: #4a9eff;
+            color: #0a0a0a;
+        }
+
         footer {
             background: #0a0a0a;
             color: #e0e0e0;
@@ -228,6 +293,7 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#accomplishments">Accomplishments</a></li>
                     </ul>
@@ -395,6 +461,66 @@
                         <li>Diverse Community Populations</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <h3>Sentinel-Net — Behavioral Safety System</h3>
+                    <p>Multimodal ML pipeline for institutional safety monitoring. Modules include real-time violence/aggression detection (YOLOv8 + R3D-18), fall detection (Pose-BiLSTM), affect recognition, vocal emotion analysis, and an air-gapped conversational risk engine. Designed for behavioral health and corrections environments with HIPAA/FERPA-compliant consent architecture.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">PyTorch</span>
+                        <span class="project-tag">YOLOv8</span>
+                        <span class="project-tag">MLflow</span>
+                        <span class="project-tag">Clinical AI</span>
+                        <span class="project-tag">Computer Vision</span>
+                    </div>
+                    <a href="https://github.com/AddictionDragon/Sentinel_Events_Project" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Enterprise AI Integration Hub</h3>
+                    <p>Framework for orchestrating AI/ML capabilities across the enterprise SaaS platforms most common in higher education and health systems. Six production adapters (Salesforce, ServiceNow, Workday, D2L, Banner, O365) with an event-driven dispatcher and five clinical ML models: sentiment analysis, churn prediction, ticket routing, learning recommendation, and a GBM student success risk model.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">scikit-learn</span>
+                        <span class="project-tag">Enterprise Adapters</span>
+                        <span class="project-tag">Higher Ed AI</span>
+                        <span class="project-tag">Healthcare AI</span>
+                    </div>
+                    <a href="https://github.com/AddictionDragon/enterprise-ai-integration-hub" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>IMDB Sentiment Pipeline</h3>
+                    <p>End-to-end NLP pipeline benchmarking four models (Naive Bayes, Logistic Regression, SVM, LSTM) on 50k IMDB reviews. Includes production-grade preprocessing, custom WordCloud bug fix (Pillow 9/TransposedFont incompatibility), and inline documentation of each fix for reproducibility.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">NLP</span>
+                        <span class="project-tag">Keras</span>
+                        <span class="project-tag">scikit-learn</span>
+                        <span class="project-tag">NLTK</span>
+                        <span class="project-tag">Jupyter</span>
+                    </div>
+                    <a href="https://github.com/AddictionDragon" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Predictive Coding Network — MNIST</h3>
+                    <p>Biologically inspired image reconstruction using a Predictive Coding Network (PCN) trained on MNIST and Fashion-MNIST. Implements Hebbian-style top-down prediction with bottom-up error signals in PyTorch. Includes instructional documentation of a non-trivial non-leaf tensor bug fix in the hidden state update loop.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">PyTorch</span>
+                        <span class="project-tag">Neuroscience AI</span>
+                        <span class="project-tag">Unsupervised Learning</span>
+                        <span class="project-tag">Jupyter</span>
+                    </div>
+                    <a href="https://github.com/AddictionDragon" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+
             </div>
         </div>
     </section>
